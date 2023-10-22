@@ -48,12 +48,13 @@ if __name__ == '__main__':
 
     plain_text = extract_text_from_powerpoint(path)
     
-    print(plain_text)
+    # print(plain_text)
 
-    print(clean_text(plain_text))
+    # print(clean_text(plain_text))
 
-    b = gpt.bot(gpt.keys.gpt_api_key)
-    print(b.chat("list main topics from this: " + clean_text(plain_text)))
+    b = gpt.gpt(gpt.keys.gpt_api_key)
+    print(b.chat("make a list of flash cards for this " + clean_text(plain_text)))
 
+    
 
     

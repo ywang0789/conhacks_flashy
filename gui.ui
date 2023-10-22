@@ -956,33 +956,130 @@ background-color: rgb(97, 123, 255);</string>
                 </sizepolicy>
                </property>
                <property name="styleSheet">
-                <string notr="true">background: transparent;</string>
+                <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="home_page">
                 <layout class="QVBoxLayout" name="verticalLayout_10">
                  <item>
-                  <widget class="QLabel" name="label_6">
-                   <property name="font">
-                    <font>
-                     <family>Segoe UI</family>
-                     <pointsize>40</pointsize>
-                    </font>
+                  <widget class="QFrame" name="home_page_frame">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
                    </property>
-                   <property name="text">
-                    <string>HOME</string>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
                    </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
+                   <widget class="QTextEdit" name="textEdit">
+                    <property name="geometry">
+                     <rect>
+                      <x>40</x>
+                      <y>60</y>
+                      <width>481</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="home_file_button">
+                    <property name="geometry">
+                     <rect>
+                      <x>580</x>
+                      <y>60</y>
+                      <width>75</width>
+                      <height>23</height>
+                     </rect>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string>OK</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="home_prompt_label">
+                    <property name="geometry">
+                     <rect>
+                      <x>60</x>
+                      <y>20</y>
+                      <width>151</width>
+                      <height>16</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Arial Black</family>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string>File location:</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="home_label_status">
+                    <property name="geometry">
+                     <rect>
+                      <x>50</x>
+                      <y>110</y>
+                      <width>121</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
                   </widget>
                  </item>
                 </layout>
                </widget>
                <widget class="QWidget" name="content_page">
-                <layout class="QVBoxLayout" name="verticalLayout_6"/>
+                <layout class="QVBoxLayout" name="verticalLayout_6">
+                 <item>
+                  <widget class="QFrame" name="frame">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_2">
+                    <item>
+                     <widget class="QTextEdit" name="flash_card">
+                      <property name="font">
+                       <font>
+                        <family>Arial</family>
+                        <pointsize>24</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(96, 124, 255);
+color: rgb(0, 0, 0);</string>
+                      </property>
+                      <property name="readOnly">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="content_next_button">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(0, 0, 0);</string>
+                      </property>
+                      <property name="text">
+                       <string>Next</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
                <widget class="QWidget" name="settings_page">
                 <widget class="QLabel" name="label_8">

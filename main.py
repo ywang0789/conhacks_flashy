@@ -19,6 +19,9 @@ class UI(QMainWindow):
         super(UI, self).__init__()
         # load ui file
         loadUi("gui.ui", self)
+        self.file_name =''
+        self.flash_cards = []
+        self.index = 0
         
         # initiate bot
         # self.bot = gpt.gpt(keys.gpt_api_key)
@@ -29,22 +32,30 @@ class UI(QMainWindow):
         self.settings_button.clicked.connect(self.showSettings)
 
         # get file location
-        self.home_file_button.clicked.connect(self.getFileLocation)
+        self.home_file_button.clicked.connect(self.getFileName)
+
+        # show flash card 
+        self.show_answer_button.clicked.connect(self.showFlashCardAnswer)
 
     # get file location from file_location_textedit
     def getFileName(self):
-        file_name = self.file_location_lineedit.text().strip()
-        return file_name
+        self.file_name = self.file_location_lineedit.text().strip()
+        self.getFlashCards()
+        print(self.file_name)
+        print(self.flash_cards)
     
-    def getFlashCards(self, file_location):
-        pass
+    def getFlashCards(self):
+        self.flash_cards = gpt.PDFtoFlashcards.convertToNote(self.file_name)
 
+    def showFlashCardQuestion(self):
+        # show flash card question
+        #print(self.flash_cards)
+        self.flash_card_textedit.append(self.flash_card[self.index].question)
     
-
-
-
-
-
+    def showFlashCardAnswer(self, flash_card):
+        # show flash card answer
+        self.flash_card_textedit.append(flash_card.answer)
+    
     # functions for home button
     def showHome(self):
         self.stackedWidget.setCurrentIndex(0)
@@ -62,6 +73,8 @@ class UI(QMainWindow):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     ui = UI()
+    ui.showHome()
+    
     ui.show()
     app.exec_()
 

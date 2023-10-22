@@ -959,7 +959,7 @@ background-color: rgb(97, 123, 255);</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="home_page">
                 <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -971,21 +971,11 @@ background-color: rgb(97, 123, 255);</string>
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
-                   <widget class="QTextEdit" name="textEdit">
-                    <property name="geometry">
-                     <rect>
-                      <x>40</x>
-                      <y>60</y>
-                      <width>481</width>
-                      <height>31</height>
-                     </rect>
-                    </property>
-                   </widget>
                    <widget class="QPushButton" name="home_file_button">
                     <property name="geometry">
                      <rect>
-                      <x>580</x>
-                      <y>60</y>
+                      <x>570</x>
+                      <y>110</y>
                       <width>75</width>
                       <height>23</height>
                      </rect>
@@ -1002,8 +992,8 @@ background-color: rgb(97, 123, 255);</string>
                      <rect>
                       <x>60</x>
                       <y>20</y>
-                      <width>151</width>
-                      <height>16</height>
+                      <width>321</width>
+                      <height>51</height>
                      </rect>
                     </property>
                     <property name="font">
@@ -1016,20 +1006,30 @@ background-color: rgb(97, 123, 255);</string>
                      <string notr="true">color: rgb(0, 0, 0);</string>
                     </property>
                     <property name="text">
-                     <string>File location:</string>
+                     <string>File name:</string>
                     </property>
                    </widget>
                    <widget class="QLabel" name="home_label_status">
                     <property name="geometry">
                      <rect>
-                      <x>50</x>
-                      <y>110</y>
+                      <x>100</x>
+                      <y>230</y>
                       <width>121</width>
                       <height>31</height>
                      </rect>
                     </property>
                     <property name="text">
                      <string/>
+                    </property>
+                   </widget>
+                   <widget class="QLineEdit" name="file_location_lineedit">
+                    <property name="geometry">
+                     <rect>
+                      <x>60</x>
+                      <y>100</y>
+                      <width>441</width>
+                      <height>41</height>
+                     </rect>
                     </property>
                    </widget>
                   </widget>
@@ -1039,44 +1039,70 @@ background-color: rgb(97, 123, 255);</string>
                <widget class="QWidget" name="content_page">
                 <layout class="QVBoxLayout" name="verticalLayout_6">
                  <item>
-                  <widget class="QFrame" name="frame">
+                  <widget class="QFrame" name="content_page_frame">
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
                    </property>
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
-                   <layout class="QHBoxLayout" name="horizontalLayout_2">
-                    <item>
-                     <widget class="QTextEdit" name="flash_card">
-                      <property name="font">
-                       <font>
-                        <family>Arial</family>
-                        <pointsize>24</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: rgb(96, 124, 255);
+                   <widget class="QTextEdit" name="flash_card_textedit">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>10</y>
+                      <width>711</width>
+                      <height>371</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Arial</family>
+                      <pointsize>24</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(96, 124, 255);
 color: rgb(0, 0, 0);</string>
-                      </property>
-                      <property name="readOnly">
-                       <bool>true</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QPushButton" name="content_next_button">
-                      <property name="styleSheet">
-                       <string notr="true">color: rgb(0, 0, 0);</string>
-                      </property>
-                      <property name="text">
-                       <string>Next</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
+                    </property>
+                    <property name="readOnly">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="next_card_button">
+                    <property name="geometry">
+                     <rect>
+                      <x>769</x>
+                      <y>248</y>
+                      <width>75</width>
+                      <height>23</height>
+                     </rect>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string>Next</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="show_answer_button">
+                    <property name="geometry">
+                     <rect>
+                      <x>330</x>
+                      <y>410</y>
+                      <width>75</width>
+                      <height>23</height>
+                     </rect>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string>Show Answer</string>
+                    </property>
+                   </widget>
                   </widget>
                  </item>
                 </layout>

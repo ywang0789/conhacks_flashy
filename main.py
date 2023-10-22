@@ -21,12 +21,28 @@ class UI(QMainWindow):
         loadUi("gui.ui", self)
         
         # initiate bot
-        self.bot = gpt.gpt(keys.gpt_api_key)
+        # self.bot = gpt.gpt(keys.gpt_api_key)
 
         # button clicked events
         self.home_button.clicked.connect(self.showHome)
         self.content_button.clicked.connect(self.showContent)
         self.settings_button.clicked.connect(self.showSettings)
+
+        # get file location
+        self.home_file_button.clicked.connect(self.getFileLocation)
+
+    # get file location from file_location_textedit
+    def getFileName(self):
+        file_name = self.file_location_lineedit.text().strip()
+        return file_name
+    
+    def getFlashCards(self, file_location):
+        pass
+
+    
+
+
+
 
 
     # functions for home button
